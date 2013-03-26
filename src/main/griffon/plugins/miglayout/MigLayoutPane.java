@@ -198,6 +198,10 @@ public class MigLayoutPane extends Pane {
             throw new IllegalArgumentException("Illegal constraint type: " + constr.getClass().toString());
         }
         layoutConstraints = constr;
+        // if debug is set, do it
+        if (lc != null && lc.getDebugMillis() > 0) {
+            iDebug = true;
+        }
     }
 
     /**
