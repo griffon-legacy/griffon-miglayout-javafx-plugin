@@ -1,32 +1,12 @@
 griffon.project.dependency.resolution = {
-    // implicit variables
-    // pluginName:     plugin's name
-    // pluginVersion:  plugin's version
-    // pluginDirPath:  plugin's install path
-    // griffonVersion: current Griffon version
-    // groovyVersion:  bundled groovy
-    // springVersion:  bundled Spring
-    // antVertsion:    bundled Ant
-    // slf4jVersion:   bundled Slf4j
-
-    // inherit Griffon' default dependencies
-    inherits("global") {
-    }
-    log "warn" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
+    inherits "global"
+    log "warn"
     repositories {
         griffonHome()
         mavenCentral()
     }
     dependencies {
         compile 'com.miglayout:miglayout-core:4.2'
-    }
-}
-
-griffon {
-    doc {
-        logo = '<a href="http://griffon-framework.org" target="_blank"><img alt="The Griffon Framework" src="../img/griffon.png" border="0"/></a>'
-        sponsorLogo = "<br/>"
-        footer = "<br/><br/>Made with Griffon (@griffon.version@)"
     }
 }
 
